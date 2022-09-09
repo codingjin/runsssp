@@ -1,5 +1,8 @@
 # runsssp
 
-Generate large dataset
+Generate large dataset, through https://github.com/farkhor/PaRMAT
+
+
+12
 
 
