@@ -47,7 +47,7 @@ unzip bfs.zip
   
   ./kcore DATAFOLDER/out 1024 16 16
   
-  (It needs two 16, then we got 64 files named out.xxx_col-16-coo-tiled-1024-xx; 16 is the stripe length, we may change it accordingly)
+  (It needs two 16, then we got 64 files named out.xxx_col-16-coo-tiled-1024-xx; 16 is the stripe length, we may change it accordingly. For large dataset:  ./kcore DATAFOLDER/out 8192 128 128)
 
 (4) execute sssp
 
@@ -56,6 +56,8 @@ unzip bfs.zip
   make
   
   ./sssp ~/datafolder/soc-pokec-relationships.txt 1024 16 16
+  
+  (For large dataset: ./sssp ~/datafolder/soc-pokec-relationships.txt 8192 128 128)
   
   (The last parameter is the number of threads)
   
