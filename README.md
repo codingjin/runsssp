@@ -37,7 +37,7 @@ unzip bfs.zip
   
   ./page_rank DATAFOLDER/out 1024 1024
   
-  (It needs two 1024, then we got 64 files named out.xxx_coo-tiled-1024-xx; 1024 is the tile width, we may change it accordingly. If it reports Error: the tile width 1024, we just adjust them to 8192: ./page_rank DATAFOLDER/out 8192 8192)
+  (It needs two 1024, then we got 64 files named out.xxx_coo-tiled-1024-xx; 1024 is the tile width, we may change it accordingly. If it reports Error: the tile width 1024, we just adjust them to 2048/8192: ./page_rank DATAFOLDER/out 2048 2048)
   
 (3) Column-major modifying
   
@@ -47,7 +47,7 @@ unzip bfs.zip
   
   ./kcore DATAFOLDER/out 1024 16 16
   
-  (It needs two 16, then we got 64 files named out.xxx_col-16-coo-tiled-1024-xx; 16 is the stripe length, we may change it accordingly. For large dataset:  ./kcore DATAFOLDER/out 8192 128 128)
+  (It needs two 16, then we got 64 files named out.xxx_col-16-coo-tiled-1024-xx; 16 is the stripe length, we may change it accordingly. For large dataset:  ./kcore DATAFOLDER/out 2048/8192 32/128 32/128)
 
 (4) execute sssp
 
@@ -57,7 +57,7 @@ unzip bfs.zip
   
   ./sssp ~/datafolder/soc-pokec-relationships.txt 1024 16 16
   
-  (For large dataset: ./sssp ~/datafolder/soc-pokec-relationships.txt 8192 128 16)
+  (For large dataset: ./sssp ~/datafolder/soc-pokec-relationships.txt 2048/8192 32/128 16)
   
   (The last parameter is the number of threads)
   
