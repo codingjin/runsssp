@@ -57,7 +57,7 @@ unzip bfs.zip
   
   ./sssp ~/datafolder/soc-pokec-relationships.txt 1024 16 16
   
-  (For large dataset: ./sssp ~/datafolder/soc-pokec-relationships.txt 8192 128 128)
+  (For large dataset: ./sssp ~/datafolder/soc-pokec-relationships.txt 8192 128 16)
   
   (The last parameter is the number of threads)
   
