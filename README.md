@@ -37,7 +37,7 @@ unzip bfs.zip
   
   ./page_rank DATAFOLDER/out 1024 1024
   
-  (It needs two 1024, then we got 64 files named out.xxx_coo-tiled-1024-xx; 1024 is the tile width, we may change it accordingly)
+  (It needs two 1024, then we got 64 files named out.xxx_coo-tiled-1024-xx; 1024 is the tile width, we may change it accordingly. If it reports Error: the tile width 1024, we just adjust them to 8192: ./page_rank DATAFOLDER/out 8192 8192)
   
 (3) Column-major modifying
   
