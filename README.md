@@ -4,7 +4,7 @@
 
 E.g: 
 
-./PaRMAT -nVertices 73171703 -nEdges 2307319717
+./PaRMAT -nVertices 73171703 -nEdges 1307319717
 
 
 Then, add this line to the 1st line of output file, out.
