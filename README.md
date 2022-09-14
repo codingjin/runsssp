@@ -35,9 +35,9 @@ unzip bfs.zip
   
   make
   
-  ./page_rank DATAFOLDER/out 1024 1024
+  ./page_rank DATAFOLDER/out 2048 2048
   
-  (It needs two 1024, then we got 64 files named out.xxx_coo-tiled-1024-xx; 1024 is the tile width, we may change it accordingly. If it reports Error: the tile width 1024, we just adjust them to 2048/8192: ./page_rank DATAFOLDER/out 2048 2048)
+  (It needs two 1024, then we got 64 files named out.xxx_coo-tiled-2048-xx; 2048 is the tile width, we may change it accordingly. If it reports Error: the tile width 2048, we just adjust them to 8192: ./page_rank DATAFOLDER/out 8192 8192)
   
 (3) Column-major modifying
   
@@ -45,7 +45,7 @@ unzip bfs.zip
   
   make
   
-  ./kcore DATAFOLDER/out 1024 16 16
+  ./kcore DATAFOLDER/out 2048 32 32
   
   (It needs two 16, then we got 64 files named out.xxx_col-16-coo-tiled-1024-xx; 16 is the stripe length, we may change it accordingly. For large dataset:  ./kcore DATAFOLDER/out 2048/8192 32/128 32/128)
 
@@ -55,7 +55,7 @@ unzip bfs.zip
   
   make
   
-  ./sssp ~/datafolder/soc-pokec-relationships.txt 1024 16 1
+  ./sssp ~/datafolder/soc-pokec-relationships.txt 2048 32 16
   
   (For large dataset: ./sssp ~/datafolder/soc-pokec-relationships.txt 2048/8192 32/128 16)
   
