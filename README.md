@@ -55,9 +55,9 @@ unzip bfs.zip
   
   make
   
-  ./sssp ~/datafolder/soc-pokec-relationships.txt 2048 32 16
+  ./sssp ~/datafolder/out 2048 32 16
   
-  (For large dataset: ./sssp ~/datafolder/soc-pokec-relationships.txt 2048/8192 32/128 16)
+  (For large dataset: ./sssp ~/datafolder/out 2048/8192 32/128 16)
   
   (The last parameter is the number of threads, like 1, 16, 32, 64, ...)
   
