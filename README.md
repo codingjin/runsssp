@@ -67,3 +67,41 @@ unzip bfs.zip
 
 
 
+# run bfs
+This specific data I am using for ??GB max memory consumption as a whole VM.
+
+The workload running on Host OS will consume ~28GB.
+
+1. Reorder Processing
+
+Given the GDATA/ generated above, we need to add 2 reorder-processing phases before running bfs.
+
+(1) Reorder (according to BFS accessing order)
+
+  (1.1) cd BENCHMARK/tools/vertex_id_remap
+
+  (1.2) Compile for unweighted graph: make clean && make
+
+  (1.3) Run: ./bfs GDATA/out
+
+  (1.4) There would be one output file: GDATA/out_reorder
+  
+（2）Reorder (based on vertex degrees, then vertex 0 has the most degrees)
+ 
+  （2.1） cd BECHMARK/tools/vertex_id_reorder_to_degrees
+  
+  （2.2） Compile for unweighted graph: make clean && make
+
+  （2.3） Run: ./bfs GDATA/out
+  
+   (2.4) There will be one output file: GDATA/out_degreeReordered
+
+
+2. Run the BFS benchmark
+
+  (2.1) cd BENCHMARK/app/bfs_serial
+  
+  (2.2) Run: ./bfs GDATA/out 8192 128
+
+
+
